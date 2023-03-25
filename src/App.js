@@ -75,9 +75,7 @@ function App() {
           clearInterval(timer)
           setIsDone(true)
           setColor("default")
-          if (counter === 0) {
-            setCounter(counter + 1)
-          }
+          document.title = `Typing Test`
         }
         counter++;
       }, 1000);
@@ -86,7 +84,7 @@ function App() {
 
   if (deviceType() !== "desktop" || size < 510) {
     return(
-      <div className="containerLikeBody" style={{color:'white', alignItems:"center", fontSize:"20px"}}>
+      <div className="containerLikeBody" id="errorText" style={{color:'white', alignItems:"center"}}>
         დევაისის ზომა არ შეესაბამება კონტენტს
       </div>
     );
@@ -100,7 +98,7 @@ function App() {
             <p className="word">{word}</p>
           </div>
           <div className="typeWord">
-            <input type="text" className="input" placeholder={isStated ? "დაწერეთ მოცემული სიტყვა" : "დაწერეთ რაიმე დასაწყებად"} onChange={(arg) => change(arg)}></input>
+            <input type="text" className="input" placeholder={isStated ? "დაწერეთ მოცემული სიტყვა" : "დაწერეთ მოცემული სიტყვა დასაწყებად"} onChange={(arg) => change(arg)}></input>
           </div>
         </div>
       </div>

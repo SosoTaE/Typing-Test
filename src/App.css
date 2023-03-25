@@ -3,7 +3,27 @@
   display: flex;
   justify-content: center;
   height: 100vh;
-  background: radial-gradient(rgb(36, 10, 63),rgb(40, 12, 18))
+  background: radial-gradient(rgb(36, 10, 63),rgb(40, 12, 18));
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 512px) {
+  .containerLikeBody{
+    font-size:20px ;
+  }
+}
+
+
+@media only screen and (max-width: 360px) {
+  .containerLikeBody {
+    font-size:15px ;
+  }
+}
+
+@media only screen and (max-width: 270px) {
+  .containerLikeBody {
+    font-size:10px ;
+  }
 }
 
 .container {
@@ -77,10 +97,4 @@
   font-weight: bold;
   font-size: 17px;
   cursor: pointer;
-}
-
-
-.timer {
-  font-size: 25px;
-  color: white;
 }
