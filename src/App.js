@@ -108,7 +108,7 @@ function App() {
   return(
     <div className="containerLikeBody" style={{background: _css[color], alignItems:"center", flexDirection:"column"}}>
       <div className="results">
-        <p>სიჩქარე: {score}WPS</p>
+        <p>სიჩქარე: {score}WPM</p>
         <p>სიზუსტე: {(score/counter * 100).toString() === "NaN" ? 0 : Math.round(score/counter * 100)}%</p>
         <p>შეცდომა:{((counter - score) / counter * 100).toString() === "NaN" ? 0 : 100 - Math.round(score/counter * 100)}%</p>
       </div>
